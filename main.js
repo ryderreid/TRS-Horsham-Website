@@ -1,17 +1,17 @@
 // Initialize Firebase (ADD YOUR OWN DATA)
 var config = {
-    apiKey: "AIzaSyB79GaMXzP-iIFBO5W38Rl057GHpk38hGE",
-    authDomain: "felixmmt-d7568.firebaseapp.com",
-    databaseURL: "https://felixmmt-d7568-default-rtdb.firebaseio.com",
-    projectId: "felixmmt-d7568",
-    storageBucket: "felixmmt-d7568.appspot.com",
-    messagingSenderId: "131753674604",
-    appId: "1:131753674604:web:19f6132a34f8e2f4541549"
+    apiKey: "AIzaSyC-70qAQa3T_ktyiC8q0tuKZKNAXwExJHA",
+    authDomain: "totally-reliable-service.firebaseapp.com",
+    databaseURL: "https://totally-reliable-service-default-rtdb.firebaseio.com",
+    projectId: "totally-reliable-service",
+    storageBucket: "totally-reliable-service.appspot.com",
+    messagingSenderId: "994264255062",
+    appId: "1:994264255062:web:2308479d13cc377f0409f7"
   };
   firebase.initializeApp(config);
   
   // Reference messages collection
-  var messagesRef = firebase.database().ref('applications');
+  var messagesRef = firebase.database().ref('enquiries');
   
   // Listen for form submit
   document.getElementById('contactForm').addEventListener('submit', submitForm);
@@ -23,9 +23,13 @@ var config = {
     // Get values
     var name = getInputVal('name');
     var email = getInputVal('email');
+    var phone = getInputVal('phone');
+    var date = getInputVal('date');
+    var info = getInputVal('info');
+    var budget = getInputVal('budget');
     
     // Save message
-    saveMessage(name, email);
+    saveMessage(name, email, phone, date, info, budget);
   
     // Show alert
     document.querySelector('.alert').style.display = 'block';
@@ -45,10 +49,14 @@ var config = {
   }
   
   // Save message to firebase
-  function saveMessage(name, email){
+  function saveMessage(name, email, phone, date, info, budget){
     var newMessageRef = messagesRef.push();
     newMessageRef.set({
       name:name,
       email:email,
+      phone:phone,
+      date:date,
+      info:info,
+      budget:budget
     });
   }

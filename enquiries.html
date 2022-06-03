@@ -1,15 +1,15 @@
 <title>Enquiries - TRS Horsham</title>
+<link rel="icon" href="./handyman-transparent.png">
 
 <link rel="stylesheet" href="./enquiries.css">
 
 <body>
     <ul>
-        <li><a>TRS Horsham</a></li>
+        <li><a>TRS Property Maintenance Horsham</a></li>
         <li><a class="active" href="./index.html">Home</a></li>
         <li><a href="./enquiries.html">Enquiries</a></li>
         <li><a href="https://www.facebook.com/TRSPropertyMaintenanceHorsham">Facebook</a></li>
         <li><a>Phone: 0429 865 034</a></li>
-        <li><a>ABN 19 731 161 002</a></li>
       </ul>
     <div class="navbar">
       <h1>©️ 2022 Totally Reliable Service Property Maintenance Horsham.</h1>
@@ -44,12 +44,16 @@
                 <input type="phone" name="phone" id="phone"required>
               </p>
               <p>
-                <label>Due By Date</label>
-                <input type="date" name="date" id="date"required>
+                <label>Due Date</label>
+                <input type="date" name="duedate" id="date"required>
               </p>
               <p>
                 <label>Information</label>
-                <input type="information" name="information" id="information"required>
+                <input type="information" name="info" id="info"required>
+              </p>
+              <p>
+                <label>Budget</label>
+                <input type="number" placeholder="(&dollar;)AUD" or zero for none name="budget" id="budget"required>
               </p>
             <p>
             <p class="full">
@@ -64,7 +68,7 @@
   </body>
   </html>
   <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
-    <script src="main.js"></script>
+    <script src="./main.js"></script>
   
   <script>
     var host = "https://felix.mikumusic.team.cf/";

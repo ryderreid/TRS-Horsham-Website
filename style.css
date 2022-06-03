@@ -86,10 +86,8 @@ body {
 }
 
 .ul1 {
-    display: block;
-    color: #FFF;
-    text-align: center;
-    font-family: Arial Black;
-    padding: 14px 16px;
-    text-decoration: none;
+  color: #0000FB;
+  font-family: Arial Black;
+  margin-left: auto;
+  list-style-type: square;
 }
