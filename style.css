@@ -1,0 +1,95 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0000FB;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: #FFF;
+    text-align: center;
+    font-family: Arial Black;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #0000FB;
+  }
+  
+  .active {
+    background-color: #0000FB;
+  }
+
+  /* Place the navbar at the bottom of the page, and make it stick */
+.navbar {
+  background-color: #0000FB;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Style the links inside the navigation bar */
+.navbar h1 {
+  float: left;
+  display: block;
+  color: #FFF;
+  text-align: center;
+  padding: 14px 18px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: Arial Black;
+}
+
+/* Change the color of links on hover */
+.navbar h1:hover {
+  background-color: #ffff00;
+  color: white;
+}
+
+/* Add a color to the active/current link */
+.bot h1:hover {
+  background-color: #0000FB;
+  color: #FFF;
+}
+
+h2 {
+  text-align: center;
+  padding: 14px 18px;
+  text-decoration: none;
+  font-size: 35px;
+  font-family: Arial Black;
+  color: White;
+}
+
+.ani {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  background:#ffff00
+}
+
+.ul1 {
+    display: block;
+    color: #FFF;
+    text-align: center;
+    font-family: Arial Black;
+    padding: 14px 16px;
+    text-decoration: none;
+}
