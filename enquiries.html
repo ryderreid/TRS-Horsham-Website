@@ -6,34 +6,29 @@
 <body>
   <div>
     <ul>
-      <li><a>TRS Property Maintenance Horsham</a></li>
-      <li><a class="active" href="./index.html">Home</a></li>
-      <li><a href="./enquiries.html">Enquiries</a></li>
-      <li><a href="https://www.facebook.com/TRSPropertyMaintenanceHorsham">Facebook</a></li>
-      <li><a></a></li>
-      <li><a></a></li>
-      <li><a></a></li>
-      <li><a></a></li>
-      <li><a></a></li>
-      <li><a></a></li>
-      <li><a></a></li>
-      <li><a></a></li>
-      <li><a></a></li>
-      <li><a></a></li>
-      <li><a></a></li>
-      <li><a></a></li>
-      <li><a></a></li>
-      <li><a></a></li>
-      <li><a></a></li>
-      <li><a></a></li>
-      <li><a></a></li>
-      <li><a>Made by Ryder James Reid</a></li>
+        <li><a>TRS Property Maintenance Horsham</a></li>
+        <li><a class="active" href="./index.html">Home</a></li>
+        <li><a href="./photo-gallery.html">Photo Gallery</a></li>
+        <li><a href="./enquiries.html">Enquiries</a></li>
+        <li><a href="https://www.facebook.com/TRSPropertyMaintenanceHorsham">Facebook</a></li>
+        <li><a></a></li>
+        <li><a></a></li>
+        <li><a></a></li>
+        <li><a></a></li>
+        <li><a></a></li>
+        <li><a></a></li>
+        <li><a></a></li>
+        <li><a></a></li>
+        <li><a></a></li>
+        <li><a></a></li>
+        <li><a></a></li>
+        <li><a></a></li>
+        <li><a>Made by Ryder James Reid</a></li>
       </ul>
     </div>
     <div class="navbar">
-      <h1>(c) 2022 Totally Reliable Service Property Maintenance Horsham.</h1>
   <h1>ABN 19 731 161 002</h1>
-  <h1>Phone: 0429 865 034</h1>
+  <h1>CALL 0429 865 034</h1>
   <h1>Email: trspm78@gmail.com</h1>
 </div>
     </div>
@@ -90,5 +85,24 @@
     if ((host == window.location.host) && (window.location.protocol != "https:"))
       window.location.protocol = "https";
   </script>
-  
-  </html>
+
+  <rewrite>
+    <rules>
+      <rule name="Hide .html ext">
+        <match url="^(.*)" ignoreCase="true" />
+        <conditions>
+          <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+          <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+          <add input="{REQUEST_FILENAME}.html" matchType="IsFile" />
+        </conditions>
+        <action type="Rewrite" url="{R:0}.html" />
+      </rule>
+      <rule name="Redirecting .html ext" stopProcessing="true">
+        <match url="^(.*).html" />
+        <conditions logicalGrouping="MatchAny">
+          <add input="{URL}" pattern="(.*).html"  />
+        </conditions>
+        <action type="Redirect" url="{R:1}" />
+      </rule>
+    </rules>
+  </rewrite>
