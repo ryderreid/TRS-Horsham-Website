@@ -26,10 +26,9 @@ var config = {
     var phone = getInputVal('phone');
     var date = getInputVal('date');
     var info = getInputVal('info');
-    var budget = getInputVal('budget');
     
     // Save message
-    saveMessage(name, email, phone, date, info, budget);
+    saveMessage(name, email, phone, date, info);
   
     // Show alert
     document.querySelector('.alert').style.display = 'block';
@@ -49,7 +48,7 @@ var config = {
   }
   
   // Save message to firebase
-  function saveMessage(name, email, phone, date, info, budget){
+  function saveMessage(name, email, phone, date, info){
     var newMessageRef = messagesRef.push();
     newMessageRef.set({
       name:name,
@@ -57,6 +56,5 @@ var config = {
       phone:phone,
       date:date,
       info:info,
-      budget:budget
     });
   }

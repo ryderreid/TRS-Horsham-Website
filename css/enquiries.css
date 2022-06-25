@@ -72,7 +72,7 @@
   
   .contact form button, .contact form input, .contact form textarea{
     width:100%;
-    padding:1em;
+    padding:1.2em;
     border:1px solid #0000FB;
   }
   
@@ -88,7 +88,7 @@
     outline:0;
     transition: background-color 2s ease-out;
   }
-  
+
   .alert{
     text-align: center;
     padding:10px;
